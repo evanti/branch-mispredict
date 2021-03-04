@@ -39,7 +39,7 @@
     #endif
 #endif
 
-volatile rand_val = 0.0;
+volatile double rand_val = 0.0;
 
 #if N > MAX_STATIC
 double** A;
@@ -106,8 +106,6 @@ void sig_handler(int signo)
 
 int main(int argc, char **argv)
 {
-    int no_random = argc > 1 && argv[1][0] == '1';
-    
     init_arrays();
 
     if (signal(SIGINT, sig_handler) == SIG_ERR) {
