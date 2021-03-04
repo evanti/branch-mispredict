@@ -1,2 +1,2 @@
 # branch-mispredict
-Tests CPU capacity to handle branch mispredicts
+Tests CPU architecture capacity to handle branch mispredicts
