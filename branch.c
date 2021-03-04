@@ -9,34 +9,36 @@
 #endif
 #define MAX_STATIC 4096
 
+#define MID_RANGE 0x8000000000000000ULL
+
 #ifdef NORAND
 #define CHECK_RANDOM1 \
-        rand_val = get_rand()
+    rand_val = rv
 #define CHECK_RANDOM2 \
-        rand_val = get_rand()
+    rand_val = rv
 #define CHECK_RANDOM3 \
-        rand_val = get_rand()
+    rand_val = rv
 #else
     #ifndef NORAND1
     #define CHECK_RANDOM1 \
-        if (rand_in_lower_half()) continue
+        if (rv < MID_RANGE) continue
     #else
     #define CHECK_RANDOM1 \
-        rand_val = get_rand()
+        rand_val = rv
     #endif
     #ifndef NORAND2
     #define CHECK_RANDOM2 \
-        if (rand_in_lower_half()) continue
+        if (rv < MID_RANGE) continue
     #else
     #define CHECK_RANDOM2 \
-        rand_val = get_rand()
+        rand_val = rv
     #endif
     #ifndef NORAND3
     #define CHECK_RANDOM3 \
-        if (rand_in_lower_half()) continue
+        if (rv < MID_RANGE) continue
     #else
     #define CHECK_RANDOM3 \
-        rand_val = get_rand()
+        rand_val = rv
     #endif
 #endif
 
@@ -55,22 +57,8 @@ double C[N][N];
 struct timeval start = {0};
 struct timeval finish = {0};
 volatile unsigned long long counter = 0ULL;
-const static unsigned long long MID_RANGE = 0x8000000000000000ULL;
 
-inline static unsigned long long get_rand(void)
-{
-    unsigned long long result = 0ULL;
-    if (!_rdrand64_step (&result)) {
-        fprintf(stderr, "Random generator failed!\n");
-        exit(1);
-    }
-    return result;
-}
-
-inline static int rand_in_lower_half(void)
-{
-    return get_rand() < MID_RANGE;
-}
+unsigned long long result = 0ULL;
 
 void init_arrays(void)
 {
@@ -98,8 +86,11 @@ void init_arrays(void)
 #endif
         
         for (j = 0; j < N; j++) {
-            A[i][j] = (double)get_rand() / MID_RANGE / 2;
-            B[i][j] = (double)get_rand() / MID_RANGE / 2;
+            unsigned long long rv = 0ULL;
+            _rdrand64_step(&rv);
+            A[i][j] = (double)rv / MID_RANGE / 2;
+            _rdrand64_step(&rv);
+            B[i][j] = (double)rv / MID_RANGE / 2;
             C[i][j] = 0.0;
         }
     }
@@ -123,6 +114,8 @@ void sig_handler(int signo)
 
 int main(int argc, char **argv)
 {
+    unsigned long long rv = 0;
+    
     init_arrays();
 
     if (signal(SIGINT, sig_handler) == SIG_ERR) {
@@ -135,10 +128,13 @@ int main(int argc, char **argv)
     while (1) { //ждем CTRL-C
         size_t i, j ,k;
         for (i = 0; i < N; i++) {
+            _rdrand64_step(&rv);
             CHECK_RANDOM1;
             for (k = 0; k < N; k++) { //сначала должен быть этот цикл, это не ошибка
+                _rdrand64_step(&rv);
                 CHECK_RANDOM2;
                 for (j = 0; j < N; j++) {
+                    _rdrand64_step(&rv);
                     CHECK_RANDOM3;
                     C[i][j] += A[i][k]*B[k][j];/* code */
                     counter += 1;
