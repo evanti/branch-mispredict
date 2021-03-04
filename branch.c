@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <signal.h>
 #include <sys/time.h>
+#include <immintrin.h>
 
 #ifndef N
 #define N 2048
@@ -10,36 +11,36 @@
 
 #ifdef NORAND
 #define CHECK_RANDOM1 \
-    rand_val = (double)rand()/RAND_MAX
+        rand_val = get_rand()
 #define CHECK_RANDOM2 \
-    rand_val = (double)rand()/RAND_MAX
+        rand_val = get_rand()
 #define CHECK_RANDOM3 \
-    rand_val = (double)rand()/RAND_MAX
+        rand_val = get_rand()
 #else
     #ifndef NORAND1
     #define CHECK_RANDOM1 \
-        if ((double)rand()/RAND_MAX < 0.5) continue
+        if (rand_in_lower_half()) continue
     #else
     #define CHECK_RANDOM1 \
-        rand_val = (double)rand()/RAND_MAX
+        rand_val = get_rand()
     #endif
     #ifndef NORAND2
     #define CHECK_RANDOM2 \
-        if ((double)rand()/RAND_MAX < 0.5) continue
+        if (rand_in_lower_half()) continue
     #else
     #define CHECK_RANDOM2 \
-        rand_val = (double)rand()/RAND_MAX
+        rand_val = get_rand()
     #endif
     #ifndef NORAND3
     #define CHECK_RANDOM3 \
-        if ((double)rand()/RAND_MAX < 0.5) continue
+        if (rand_in_lower_half()) continue
     #else
     #define CHECK_RANDOM3 \
-        rand_val = (double)rand()/RAND_MAX
+        rand_val = get_rand()
     #endif
 #endif
 
-volatile double rand_val = 0.0;
+volatile unsigned long long rand_val = 0ULL;
 
 #if N > MAX_STATIC
 double** A;
@@ -53,7 +54,23 @@ double C[N][N];
 
 struct timeval start = {0};
 struct timeval finish = {0};
-volatile unsigned long long counter = 0;
+volatile unsigned long long counter = 0ULL;
+const static unsigned long long MID_RANGE = 0x8000000000000000ULL;
+
+inline static unsigned long long get_rand(void)
+{
+    unsigned long long result = 0ULL;
+    if (!_rdrand64_step (&result)) {
+        fprintf(stderr, "Random generator failed!\n");
+        exit(1);
+    }
+    return result;
+}
+
+inline static int rand_in_lower_half(void)
+{
+    return get_rand() < MID_RANGE;
+}
 
 void init_arrays(void)
 {
@@ -81,8 +98,8 @@ void init_arrays(void)
 #endif
         
         for (j = 0; j < N; j++) {
-            A[i][j] = (double)rand() / RAND_MAX;
-            B[i][j] = (double)rand() / RAND_MAX;
+            A[i][j] = (double)get_rand() / MID_RANGE / 2;
+            B[i][j] = (double)get_rand() / MID_RANGE / 2;
             C[i][j] = 0.0;
         }
     }
