@@ -54,20 +54,17 @@ int main(int argc, char **argv)
 
     gettimeofday(&start, NULL);
 
-    //while (1) { //ждем CTRL-C
+
         size_t i, j ,k;
         for (i = 0; i < N; i++) {
-
-            for (j = 0; j < N; j++) { //сначала должен быть этот цикл, это не ошибка
-
+            for (j = 0; j < N; j++) { 
                 for (k = 0; k < N; k++) {
-
-                    C[i][j] += A[i][k]*B[k][j];/* code */
+                    C[i][j] += A[i][k]*B[k][j];
                     counter += 1;
                 }
             }
         }
-  //  }
+
     printf("\nTotal number of operations = %llu\n", counter);
     return 0;
 }
