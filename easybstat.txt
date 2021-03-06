@@ -1,5 +1,5 @@
 
-gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c  
 Current Q = 1.000000
 Total number of attempts = 2523819906
 Total number of operations = 2523819905
