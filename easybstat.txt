@@ -1,0 +1,42 @@
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 2523819906
+Total number of operations = 2523819905
+Total time of operations = 4.763718 s
+Operations per second = 529
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 895794594
+Total number of operations = 447998442
+Total time of operations = 4.833623 s
+Operations per second = 92
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 2367308264
+Total number of operations = 236219972
+Total time of operations = 4.890322 s
+Operations per second = 48
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 16100857892
+Total number of operations = 16100857891
+Total time of operations = 29.622599 s
+Operations per second = 543
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 5753250911
+Total number of operations = 2877279324
+Total time of operations = 29.751902 s
+Operations per second = 96
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 12779946995
+Total number of operations = 1275239140
+Total time of operations = 29.714619 s
+Operations per second = 42
