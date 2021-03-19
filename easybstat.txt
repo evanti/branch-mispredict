@@ -1,42 +1,770 @@
 
-gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c  
-Current Q = 1.000000
-Total number of attempts = 2523819906
-Total number of operations = 2523819905
-Total time of operations = 4.763718 s
-Operations per second = 529
-
-gcc -O3 -march=native -mtune=native -o easyb easyb.c
-Current Q = 0.500000
-Total number of attempts = 895794594
-Total number of operations = 447998442
-Total time of operations = 4.833623 s
-Operations per second = 92
-
-gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
-Current Q = 0.100000
-Total number of attempts = 2367308264
-Total number of operations = 236219972
-Total time of operations = 4.890322 s
-Operations per second = 48
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              16
+On-line CPU(s) list: 0-15
+Thread(s) per core:  2
+Core(s) per socket:  8
+Socket(s):           1
+NUMA node(s):        1
+Vendor ID:           GenuineIntel
+CPU family:          6
+Model:               158
+Model name:          Intel(R) Core(TM) i9-9900K CPU @ 3.60GHz
+Stepping:            12
+CPU MHz:             800.474
+CPU max MHz:         5000,0000
+CPU min MHz:         800,0000
+BogoMIPS:            7200.00
+Virtualization:      VT-x
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            256K
+L3 cache:            16384K
+NUMA node0 CPU(s):   0-15
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
 
 gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
 Current Q = 1.000000
-Total number of attempts = 16100857892
-Total number of operations = 16100857891
-Total time of operations = 29.622599 s
+Total number of attempts = 25306527878
+Total number of operations = 25306527878
+Total time of operations = 29.939147 s
+Operations per second = 845
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 9008687053
+Total number of operations = 4502779977
+Total time of operations = 29.940240 s
+Operations per second = 150
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 22195276836
+Total number of operations = 2227383609
+Total time of operations = 29.940173 s
+Operations per second = 74
+
+mizhka@tamagawa ~ % sysctl hw.model
+hw.model: AMD Ryzen 7 4700U with Radeon Graphics
+cc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 14821507866
+Total number of operations = 14821507865
+Total time of operations = 29.877229 s
+Operations per second = 496
+
+cc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 6740535682
+Total number of operations = 3370878600
+Total time of operations = 29.970245 s
+Operations per second = 112
+
+cc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 17323016726
+Total number of operations = 1734988933
+Total time of operations = 29.989891 s
+Operations per second = 57
+
+LOCAL
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 16304797418
+Total number of operations = 16304797418
+Total time of operations = 29.973917 s
 Operations per second = 543
 
 gcc -O3 -march=native -mtune=native -o easyb easyb.c
 Current Q = 0.500000
-Total number of attempts = 5753250911
-Total number of operations = 2877279324
-Total time of operations = 29.751902 s
-Operations per second = 96
+Total number of attempts = 5817686254
+Total number of operations = 2904782120
+Total time of operations = 29.826946 s
+Operations per second = 97
 
 gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
 Current Q = 0.100000
-Total number of attempts = 12779946995
-Total number of operations = 1275239140
-Total time of operations = 29.714619 s
-Operations per second = 42
+Total number of attempts = 14432830963
+Total number of operations = 1439186804
+Total time of operations = 29.565780 s
+Operations per second = 48
+
+
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              2
+On-line CPU(s) list: 0,1
+Thread(s) per core:  2
+Core(s) per socket:  1
+Socket(s):           1
+NUMA node(s):        1
+Vendor ID:           GenuineIntel
+CPU family:          6
+Model:               85
+Model name:          Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+Stepping:            7
+CPU MHz:             2499.998
+BogoMIPS:            4999.99
+Hypervisor vendor:   KVM
+Virtualization type: full
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            1024K
+L3 cache:            36608K
+NUMA node0 CPU(s):   0,1
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves ida arat pku ospke
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 16853683591
+Total number of operations = 16853683591
+Total time of operations = 29.971596 s
+Operations per second = 562
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 5704168707
+Total number of operations = 2851230075
+Total time of operations = 29.987472 s
+Operations per second = 95
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 14325885179
+Total number of operations = 1437129765
+Total time of operations = 29.986178 s
+Operations per second = 47
+
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                4
+On-line CPU(s) list:   0-3
+Thread(s) per core:    1
+Core(s) per socket:    4
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 142
+Model name:            Intel(R) Core(TM) i5-8350U CPU @ 1.70GHz
+Stepping:              10
+CPU MHz:               1896.001
+BogoMIPS:              3792.00
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              6144K
+NUMA node0 CPU(s):     0-3
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc eagerfpu pni pclmulqdq ssse3 cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single fsgsbase avx2 invpcid rdseed clflushopt md_clear flush_l1d
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 18731173961
+Total number of operations = 18731173961
+Total time of operations = 29.868958 s
+Operations per second = 627
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 6011246445
+Total number of operations = 3004579822
+Total time of operations = 29.828505 s
+Operations per second = 100
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 14437988308
+Total number of operations = 1448909369
+Total time of operations = 29.814482 s
+Operations per second = 48
+
+
+Архитектура:                     x86_64
+CPU op-mode(s):                  32-bit, 64-bit
+Порядок байт:                    Little Endian
+Address sizes:                   36 bits physical, 48 bits virtual
+CPU(s):                          4
+On-line CPU(s) list:             0-3
+Потоков на ядро:                 2
+Ядер на сокет:                   2
+Сокетов:                         1
+NUMA node(s):                    1
+ID прроизводителя:               GenuineIntel
+Семейство ЦПУ:                   6
+Модель:                          37
+Имя модели:                      Intel(R) Core(TM) i5 CPU       M 480  @ 2.67GHz
+Степпинг:                        5
+Frequency boost:                 enabled
+CPU МГц:                         1672.962
+CPU max MHz:                     2667,0000
+CPU min MHz:                     1199,0000
+BogoMIPS:                        5319.79
+Виртуализация:                   VT-x
+L1d cache:                       64 KiB
+L1i cache:                       64 KiB
+L2 cache:                        512 KiB
+L3 cache:                        3 MiB
+NUMA node0 CPU(s):               0-3
+Vulnerability Itlb multihit:     KVM: Mitigation: Split huge pages
+Vulnerability L1tf:              Mitigation; PTE Inversion; VMX conditional cache flushes, SMT vulnerable
+Vulnerability Mds:               Vulnerable: Clear CPU buffers attempted, no microcode; SMT vulnerable
+Vulnerability Meltdown:          Mitigation; PTI
+Vulnerability Spec store bypass: Mitigation; Speculative Store Bypass disabled via prctl and seccomp
+Vulnerability Spectre v1:        Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:        Mitigation; Full generic retpoline, IBPB conditional, IBRS_FW, STIBP conditional, RSB filling
+Vulnerability Srbds:             Not affected
+Vulnerability Tsx async abort:   Not affected
+Флаги:                           fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt lahf_lm pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid dtherm ida arat flush_l1d
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 11574236628
+Total number of operations = 11574236628
+Total time of operations = 30.045212 s
+Operations per second = 385
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 4724429300
+Total number of operations = 2361395118
+Total time of operations = 30.051210 s
+Operations per second = 78
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 10040800352
+Total number of operations = 1007634334
+Total time of operations = 30.065447 s
+Operations per second = 33
+###IntelXeonScalable###
+
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    2
+Core(s) per socket:    1
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+Stepping:              7
+CPU MHz:               2499.998
+BogoMIPS:              4999.99
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              36608K
+NUMA node0 CPU(s):     0,1
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 ida arat pku ospke
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 18198581027
+Total number of operations = 18198581026
+Total time of operations = 30.046641 s
+Operations per second = 605
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 4851033524
+Total number of operations = 2424790287
+Total time of operations = 29.984118 s
+Operations per second = 80
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 12938342560
+Total number of operations = 1297935707
+Total time of operations = 29.982678 s
+Operations per second = 43
+
+
+###IntelXeonE5-2676v3(E5-2686 v4)###
+
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    2
+Core(s) per socket:    1
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 79
+Model name:            Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+Stepping:              1
+CPU MHz:               2300.072
+BogoMIPS:              4600.11
+Hypervisor vendor:     Xen
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              46080K
+NUMA node0 CPU(s):     0,1
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm invpcid_single fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 12865989917
+Total number of operations = 12865989917
+Total time of operations = 30.013008 s
+Operations per second = 428
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 5031109740
+Total number of operations = 2514801687
+Total time of operations = 29.991465 s
+Operations per second = 83
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 12375036702
+Total number of operations = 1241426530
+Total time of operations = 29.996744 s
+Operations per second = 41
+
+
+###IntelXeonCascadeLake###
+
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    2
+Core(s) per socket:    1
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+Stepping:              7
+CPU MHz:               2499.998
+BogoMIPS:              4999.99
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              36608K
+NUMA node0 CPU(s):     0,1
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single fsgsbase tsc_adjust bmi1 avx2 smep bmi2
+erms invpcid mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 ida arat pku ospke avx512_vnni
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 17933907497
+Total number of operations = 17933907497
+Total time of operations = 30.006609 s
+Operations per second = 597
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 4857967746
+Total number of operations = 2428256293
+Total time of operations = 29.989543 s
+Operations per second = 80
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 12895714257
+Total number of operations = 1293659287
+Total time of operations = 29.990370 s
+Operations per second = 43
+
+
+###IntelXeonPlatinum###
+
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    2
+Core(s) per socket:    1
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Platinum 8175M CPU @ 2.50GHz
+Stepping:              4
+CPU MHz:               2500.000
+BogoMIPS:              5000.00
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              33792K
+NUMA node0 CPU(s):     0,1
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 ida arat pku ospke
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 17936419989
+Total number of operations = 17936419988
+Total time of operations = 30.007616 s
+Operations per second = 597
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 4855144026
+Total number of operations = 2426844891
+Total time of operations = 29.989407 s
+Operations per second = 80
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 12430809993
+Total number of operations = 1247021589
+Total time of operations = 29.993397 s
+Operations per second = 41
+
+
+###AMDEPYC7000###
+
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    2
+Core(s) per socket:    1
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             AuthenticAMD
+CPU family:            23
+Model:                 1
+Model name:            AMD EPYC 7571
+Stepping:              2
+CPU MHz:               2200.024
+BogoMIPS:              4400.04
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             64K
+L2 cache:              512K
+L3 cache:              8192K
+NUMA node0 CPU(s):     0,1
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc art rep_good nopl nonstop_tsc extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch topoext retpoline_amd vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr arat npt nrip_save
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 9279636021
+Total number of operations = 9279636020
+Total time of operations = 30.034406 s
+Operations per second = 308
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 3931761393
+Total number of operations = 1965292065
+Total time of operations = 29.981938 s
+Operations per second = 65
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 9213046953
+Total number of operations = 924225192
+Total time of operations = 29.982515 s
+Operations per second = 30
+
+
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    2
+Core(s) per socket:    1
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             AuthenticAMD
+CPU family:            23
+Model:                 1
+Model name:            AMD EPYC 7571
+Stepping:              2
+CPU MHz:               2199.826
+BogoMIPS:              4399.65
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             64K
+L2 cache:              512K
+L3 cache:              8192K
+NUMA node0 CPU(s):     0,1
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc art rep_good nopl nonstop_tsc extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch topoext retpoline_amd vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr arat npt nrip_save
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 9188944652
+Total number of operations = 9188944651
+Total time of operations = 30.002256 s
+Operations per second = 306
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 3918556352
+Total number of operations = 1958691528
+Total time of operations = 29.990892 s
+Operations per second = 65
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 9228019881
+Total number of operations = 925727437
+Total time of operations = 29.988474 s
+Operations per second = 30
+
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    2
+Core(s) per socket:    1
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+Stepping:              7
+CPU MHz:               2499.992
+BogoMIPS:              4999.98
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              36608K
+NUMA node0 CPU(s):     0,1
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 ida arat pku ospke
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 17090154996
+Total number of operations = 17090154995
+Total time of operations = 29.994111 s
+Operations per second = 569
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 4252492601
+Total number of operations = 2125609608
+Total time of operations = 29.992346 s
+Operations per second = 70
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 12355849689
+Total number of operations = 1239502020
+Total time of operations = 29.991361 s
+Operations per second = 41
+
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    2
+Core(s) per socket:    1
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Platinum 8167M CPU @ 2.00GHz
+Stepping:              4
+CPU MHz:               1995.309
+BogoMIPS:              3990.61
+Virtualization:        VT-x
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              4096K
+L3 cache:              16384K
+NUMA node0 CPU(s):     0,1
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl xtopology eagerfpu
+pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f rdseed adx smap avx512cd xsaveopt xsavec xgetbv1 arat md_clear spec_ctrl intel_stibp
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 13596729996
+Total number of operations = 13596729996
+Total time of operations = 30.003733 s
+Operations per second = 453
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 3677479218
+Total number of operations = 1838189095
+Total time of operations = 29.980952 s
+Operations per second = 61
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 9672515413
+Total number of operations = 970317940
+Total time of operations = 29.980207 s
+Operations per second = 32
+
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    2
+Core(s) per socket:    1
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) CPU
+Stepping:              7
+CPU MHz:               2800.272
+BogoMIPS:              5600.54
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              33792K
+NUMA node0 CPU(s):     0,1
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat avx512_vnni md_clear spec_ctrl intel_stibp arch_capabilities
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 19231895570
+Total number of operations = 19231895569
+Total time of operations = 30.001887 s
+Operations per second = 641
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 5260445997
+Total number of operations = 2629435491
+Total time of operations = 29.989230 s
+Operations per second = 87
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 14039687227
+Total number of operations = 1408419252
+Total time of operations = 29.989477 s
+Operations per second = 46
+
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    2
+Core(s) per socket:    1
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             AuthenticAMD
+CPU family:            23
+Model:                 1
+Model name:            AMD EPYC 7551 32-Core Processor
+Stepping:              2
+CPU MHz:               1996.247
+BogoMIPS:              3992.49
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             64K
+L1i cache:             64K
+L2 cache:              512K
+L3 cache:              16384K
+NUMA node0 CPU(s):     0,1
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm art rep_good nopl extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ssbd ibpb
+vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 virt_ssbd arat md_clear
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 9237092336
+Total number of operations = 9237092336
+Total time of operations = 29.997000 s
+Operations per second = 307
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 3897535034
+Total number of operations = 1948183891
+Total time of operations = 29.981445 s
+Operations per second = 64
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 8909166117
+Total number of operations = 893741049
+Total time of operations = 29.981540 s
+Operations per second = 29
+
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    2
+Core(s) per socket:    1
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Platinum 8167M CPU @ 2.00GHz
+Stepping:              4
+CPU MHz:               1995.309
+BogoMIPS:              3990.61
+Virtualization:        VT-x
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              4096K
+L3 cache:              16384K
+NUMA node0 CPU(s):     0,1
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl xtopology eagerfpu
+pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f rdseed adx smap avx512cd xsaveopt xsavec xgetbv1 arat md_clear spec_ctrl intel_stibp
+
+gcc -O3 -march=native -DQ=01 -mtune=native -o easyb easyb.c
+Current Q = 1.000000
+Total number of attempts = 13596729996
+Total number of operations = 13596729996
+Total time of operations = 30.003733 s
+Operations per second = 453
+
+gcc -O3 -march=native -mtune=native -o easyb easyb.c
+Current Q = 0.500000
+Total number of attempts = 3677479218
+Total number of operations = 1838189095
+Total time of operations = 29.980952 s
+Operations per second = 61
+
+gcc -O3 -march=native -DQ=0.1 -mtune=native -o easyb easyb.c
+Current Q = 0.100000
+Total number of attempts = 9672515413
+Total number of operations = 970317940
+Total time of operations = 29.980207 s
+Operations per second = 32
