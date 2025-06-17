@@ -73,7 +73,17 @@ void sig_handler(int signo)
         printf("Total number of attempts = %llu\n", counter2);
         printf("Total number of operations = %llu\n", counter);
         printf("Total time of operations = %f s\n", elapsed);
-        printf("Operations per second = %llu\n", (unsigned long long)(counter / elapsed/1000000));
+        /*
+         * "counter" stores the total number of executed operations and
+         * "elapsed" is the time in seconds.  The original code additionally
+         * divided the result by one million which effectively reported the
+         * number of operations per microsecond.  This behaviour was
+         * inconsistent with the other binaries in this repository and with
+         * the printed description "Operations per second".  Remove the extra
+         * division so the value reflects operations executed each second.
+         */
+        printf("Operations per second = %llu\n",
+               (unsigned long long)(counter / elapsed));
         exit(0);
     }
 }
